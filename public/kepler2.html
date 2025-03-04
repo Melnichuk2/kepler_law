@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Закони Кеплера</title>
+    <link rel="stylesheet" href="css/kepler2.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Закони Кеплера</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="kepler1.html">1 Закон Кеплера</a>
+        <a href="kepler2.html">2 Закон Кеплера</a>
+        <a href="kepler3.html">3 Закон Кеплера</a>
+    </nav>
+    <div class="main" id="home">
+        <h2>Другий закон Кеплера</h2>
+        <p>Другого закону Кеплера який формулуюється так: радіус-вектор планети за однакові проміжки часу описує рівні площини.<br /><br />  
+            Це означає, що коли планета рухається по орбіті, то її швидкість змінюється в залежності від відстані до Сонця. Саме тому основний наслідок другого закону Кеплера означає що, не тільки відстань планети від Сонця змінюється, але й також її лінійна та кутова швидкості.<br /><br /> 
+            Коли планета має найбільшу швидкість, то вона знаходится в перигелії, тобто найближче від Сонця, а ось коли планета має найменшу швидкість, то вона знаходится в афелії, тобто коли відстань є максимальною.<br /><br /> 
+            Пояснюється це фундаментальним фізичним принципом збереження енергії: Кінетична енергія визначається швидкістю руху планети, а потенційна енергія зменшується, а кінетична енергія збільшується, що і провокує зростання швидкості. У зв’язку з цим, при віддаленні планети від Сонця кінетична енергія зменшується, саме тому йде уповільнення рухю</p>
+    </div>
+
+    <div class="container">
+        <canvas id="orbitCanvas" width="1000" height="700"></canvas>
+        <div class="controls">
+            <label for="planetSelect">Виберіть Планету: </label>
+            <select id="planetSelect"></select>
+
+            <label for="semiMajorAxis">Велика напіввісь (a.е.): </label>
+            <input type="number" id="semiMajorAxis" value="20" step="10" min="50" max="300">
+
+            <label for="Эксцентриситет">Ексцентриситет (e): </label>
+            <input type="number" id="eccentricity" value="0.5" step="0.1" min="0" max="2">
+
+            <label for="speedFactor">Швидкість: </label>
+            <input type="number" id="speedFactor" value="1" step="0.1" min="0.1" max="2">
+
+            <label for="sectorCount">Кількість секторів: </label>
+            <input type="number" id="sectorCount" value="2" min="2" max="6" step="1">
+            
+            <button onclick="calculateTimes()">Розрахувати час</button>
+            <div>
+                <h3>Результати часу для секторів:</h3>
+                <ul id="sectorTimes"></ul>
+            </div>
+            <button id="toggleButton" onclick="toggleAnimation()">Старт</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Закони Кеплера | Всі права захищені
+    </footer>
+    <script src="js/exp_vector.js"></script>
+    <script src="js/kepler2.js"></script>
+    <script src="js/calculateTime.js"></script>
+</body>
+</html>

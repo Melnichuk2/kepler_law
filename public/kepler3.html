@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Третій закон Кеплера</title>
+    <link rel="stylesheet" href="css/kepler3.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Закони Кеплера</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="kepler1.html">1 Закон Кеплера</a>
+        <a href="kepler2.html">2 Закон Кеплера</a>
+        <a href="kepler3.html">3 Закон Кеплера</a>
+    </nav>
+    <div class="main" id="home">
+        <h2>Третій закон Кеплера</h2>
+        <p>Третій закон Кеплера формулюється як: Квадрати сидеричних періодів обертання планет навколо Сонця відносяться як куби великих півосей їхніх орбіт.</p>
+        <p>Формула: \( \frac{T_1^2}{T_2^2} = \frac{a_1^3}{a_2^3} \), де \( T_1 \) і \( T_2 \) — сидеричні періоди обертання, \( a_1 \) і \( a_2 \) — великі півосі орбіт.</p>
+        <p>Цей закон дозволяє визначити період обертання за великою піввіссю без спостереження повного оберту.</p>
+    </div>
+    <div class="container">
+        <canvas id="orbitCanvas" width="1000" height="700"></canvas>
+        <div class="controls">
+            <label for="planetSelect">Виберіть планету:</label>
+            <select id="planetSelect"></select>
+
+            <label for="semiMajorAxis">Велика піввісь 1 (а.е.):</label>
+            <input type="number" id="semiMajorAxis" value="1" step="0.1" min="0.1" max="50">
+
+            <label for="semiMajorAxis2">Велика піввісь 2 (а.е.):</label>
+            <input type="number" id="semiMajorAxis2" value="2" step="0.1" min="0.1" max="50">
+
+            <label for="eccentricity">Ексцентриситет (e):</label>
+            <input type="number" id="eccentricity" value="0.0167" step="0.01" min="0" max="0.99">
+
+            <label for="speedFactor">Швидкість анімації:</label>
+            <input type="number" id="speedFactor" value="0.5" step="0.1" min="0.1" max="5">
+
+            <button id="toggleButton" onclick="toggleAnimation()">Старт</button>
+            <button onclick="zoomIn()">Збільшити</button>
+            <button onclick="zoomOut()">Зменшити</button>
+        </div>
+    </div>
+    <footer>
+        © 2024 Закони Кеплера | Всі права захищені
+    </footer>
+    <script src="js/script3.js"></script>
+</body>
+</html>

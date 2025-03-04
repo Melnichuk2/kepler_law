@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a1e30;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+header {
+    background-color: #081828;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #1b3a57;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #3c638a;
+}
+
+.main {
+    padding: 20px;
+}
+
+.main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.main ul{
+    font-size: 1.2rem;
+    margin: 50px 0;
+}
+
+.main li {
+    margin-bottom: 20px; /* Відступ між елементами списку */ 
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #081828;
+    text-align: center;
+    font-size: 0.9rem;
+    
+}
