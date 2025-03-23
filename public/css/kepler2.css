@@ -48,11 +48,14 @@ nav a:hover {
 .main h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .main p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    gap: 2 px;
+    
 }
 .container {
     display: flex;
@@ -70,14 +73,20 @@ canvas {
 .controls {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5 px;
     background-color: #1b3a57;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
-    max-width: 250px;
+    max-width: 200px;
 }
 
+.controls select {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 150px;
+    border-radius: 5px;
+}
 .controls label {
     margin-bottom: 5px;
 }
@@ -85,18 +94,20 @@ canvas {
 .controls input {
     margin-bottom: 10px;
     padding: 5px;
-    width: 100%;
+    width: 150px;
+    border-radius: 5px;
 }
 
 .controls button {
-    background-color: #0077ff;
+    background-color: #0d71e3;
     border: none;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 5px;
+    width: 190px;
 }
 
 .controls button:hover {
@@ -109,6 +120,9 @@ canvas {
     transform: scale(0.98);
 }
 
+.controls h3 {
+    font-size: 16px;
+}
 
 footer {
     margin-top: auto;

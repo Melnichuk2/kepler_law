@@ -1,5 +1,5 @@
 let sectorCount = 2; 
-const sectorColors = ['#ff0000', '#00ff00', '#0000ff', '#ff7700', '#7700ff', '#00ffff', '#ffff00', '#ff00ff']; 
+const sectorColors = ['#F5E6FF', '#D4B3FF', '#A366FF', '#7A33CC', '#5C1999', '#3D0066']; 
 
 function calculateSectorAngles(semiMajorAxis, eccentricity, sectorCount) {
     const angles = [0]; 

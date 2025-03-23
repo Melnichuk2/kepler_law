@@ -83,7 +83,7 @@ function drawPlanet(semiMajorAxis, eccentricity) {
     ctx.fill();
 }
 
-// Заглушка для drawLinesAndFocus, если она не определена в других файлах
+
 function drawLinesAndFocus(semiMajorAxis, eccentricity, angle) {
     const baseScale = getBaseScale(selectedPlanet);
     const scale = 10 * baseScale;
@@ -192,10 +192,12 @@ async function init() {
     syncInputs(); 
     updateOrbit(); 
 
+    
+
     planetSelect.addEventListener('change', selectPlanet);
     document.getElementById('semiMajorAxis').addEventListener('input', updateOrbit);
     document.getElementById('eccentricity').addEventListener('input', updateOrbit);
-    document.getElementById('speedFactor').addEventListener('input', updateOrbit); // Исправлено scaleFactor на speedFactor
+    document.getElementById('speedFactor').addEventListener('input', updateOrbit);
 }
 
 function syncInputs() {
