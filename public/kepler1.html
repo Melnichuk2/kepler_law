@@ -6,6 +6,8 @@
     <title>Закони Кеплера</title>
     <link rel="stylesheet" href="css/kepler1.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
@@ -19,12 +21,29 @@
         <a href="kepler3.html">3 Закон Кеплера</a>
     </nav>
     <div class="main" id="home">
-        <h2>Перший закон Кеплера</h2>
-        <p>Першого закону Кеплера який зараз звучить так: «всі планети обертаються навколо Сонця по елипсах, а Сонце розшташоване в одному з фокусів цих еліпсів.». Головним наслідком із першого закону є те, що відстань між Сонцем та планетою постійно змінюється, а не залишається фіксованим як до цього було.</p>
-            <p>Має таку формулу: \[ r_{\text{max}} \leq r \geq r_{\text{min}} \] де \( r_{\text{max}} \) – це афелії, а \( r_{\text{min}} \) – це перигелії.</p>
-            <p>Афелій – навіддаленіша відстань від Сонця (від грец. аро — далеко).</p>
-            <p>Перигелій – найменша відстань до Сонця (від грец. peri — поблизу, helios — Сонце).</p>
-            <p>Сума цих відстаней (афелій та перигелій) дорівнює великій осі еліпса AB: \[ r_{\text{max}} + r_{\text{min}} = 2a \] Коли орбіта близька до кола, вона має малий ексцентриситет який вказується як \( e \) – відношення відстані між фокусами \( 2c \) до довжини великої осі \( 2a \): \[ e = \frac{c}{a}, \quad 0 < e < 1 \], де \( c \) – відстань від центру еліпса до фокуса, а \( a \) – велика піввісь.</p>
+    <h2>Перший закон Кеплера</h2>
+    <p><strong>Планети обертаються навколо Сонця по еліпсах</strong>, де Сонце знаходиться в одному з фокусів. Відстань між планетою і Сонцем <em>постійно змінюється</em>.</p>
+    <div class="formula-card">
+        <p>Формула:</p>
+        <p class="latex">\[ r_{\text{max}} \leq r \geq r_{\text{min}} \]</p>
+        <p class="desc">де \( r_{\text{max}} \) — афелій, \( r_{\text{min}} \) — перигелій</p>
+    </div>
+    <ul class="info-list">
+        <li><strong>Афелій</strong> — найбільша відстань від Сонця</li>
+        <li><strong>Перигелій</strong> — найменша відстань до Сонця</li>
+    </ul>
+    <div class="formula-card">
+        <p>Сума цих відстаней дорівнює великій осі еліпса:</p>
+        <p class="latex">\[ r_{\text{max}} + r_{\text{min}} = 2a \]</p>
+    </div>
+    <div class="formula-card">
+        <p><strong>Ексцентриситет орбіти:</strong></p>
+        <p class="latex">\[ e = \frac{c}{a}, \quad 0 < e < 1 \]</p>
+        <p class="desc">де \( c \) — відстань від центру до фокуса, \( a \) — велика піввісь</p>
+    </div>
+
+    <p><strong>Якщо ексцентриситет малий, орбіта майже кругова.</strong></p>
+
     </div>
 
     <div class="container">
@@ -43,12 +62,12 @@
             <input type="number" id="speedFactor" value="0.5" step="0.1" min="0.1" max="1">
             <form>
                 <input type="checkbox" id="showAxes">
-                <label for="showAxes">Включить оси: </label>
+                <label for="showAxes">Активувати осі: </label>
                 <br>
                 <input type="checkbox" id="showLines">
-                <label for="showLines">Включить соединительные линии</label>
+                <label for="showLines">Активувати з'єднувальні лінії</label>
             </form>     
-            <button id="toggleButton" onclick="toggleAnimation()">Старт</button>
+            <button id="toggleButton" onclick="toggleAnimation()">Запустити</button>
         </div>
     </div>
 

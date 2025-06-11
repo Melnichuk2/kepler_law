@@ -6,6 +6,7 @@
     <title>Закони Кеплера</title>
     <link rel="stylesheet" href="css/kepler2.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
@@ -29,7 +30,7 @@
     <div class="container">
         <canvas id="orbitCanvas" width="1000" height="700"></canvas>
         <div class="controls">
-            <label for="planetSelect">Виберіть Планету: </label>
+            <label for="planetSelect">Виберіть планету: </label>
             <select id="planetSelect"></select>
             
             <label for="semiMajorAxis">Велика напіввісь (a.е.): </label>
@@ -49,7 +50,7 @@
                 <h3>Результати часу для секторів:</h3>
                 <ul id="sectorTimes"></ul>
             </div>
-            <button id="toggleButton" onclick="toggleAnimation()">Старт</button>
+            <button id="toggleButton" onclick="toggleAnimation()">Запустити</button>
         </div>
     </div>
 
